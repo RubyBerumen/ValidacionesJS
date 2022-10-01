@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validaciones con js</title>
+</head>
+<body>
+    <legend>Ejercicio Validación</legend>
+    <fieldset>
+        <form action="" method="post" onsubmit="return validarFormulario()">
+            <label for="">Nombre: </label>
+            <input type="text" id="caja_nombre" name="caja_nombre" size="16"
+            required
+            title="Ingrese su nombre">
+            <br>
+
+            <label for="">Código Postal México: </label>
+            <input type="text" id="caja_cp" name="caja_cp" maxlength="5" size="10"
+            required
+            title="Ingrese 5 números"
+            pattern="[0-9]{5}">
+            <br>
+
+            <label for="">Número de control:</label>
+            <input type="text" id="caja_nc" name="caja_nc" maxlength="8" size="10"
+            required
+            title="Ingrese 8 números"
+            pattern="[0-9]{8}">
+            <br>
+
+            <label for="">Número de control (con letra): </label>
+            <input type="text" id="caja_ncl" name="caja_ncl" maxlength="9" size="10"
+            required
+            title="Ingrese únicamente una letra al inicio y 8 números"
+            pattern="[SMACIsmaci][0-9]{8}">
+            <br>
+
+            <label>Número de teléfono:</label>
+            <input type="text" id="caja_numtel" name="caja_numtel" maxlength="10" size="10"
+            required
+            pattern="[0-9]{3}(-)*[0-9]{3}(-)*[0-9]{4}">
+            <br>
+
+            <label for="">Correo electrónico: </label>
+            <input type="text" id="caja_correo" name="caja_correo" size="10" required
+            title="Ingrese su correo electrónico"
+            pattern="[a-zA-Z0-9]+\.[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[.]+\.[a-zA-Z0-9]+">
+            <br>
+
+            <label for="">Contraseña: </label>
+            <input type="password" id="caja_contra" name="caja_contra" size="10" required
+            title="Ingrese su contraseña"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+            <br>
+            <input type="submit" value="Inscribir">
+        </form>
+    </fieldset>
+    <script src="validaciones.js"></script>
+</body>
+</html>
